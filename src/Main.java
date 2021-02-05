@@ -105,7 +105,7 @@ public class Main {
 		System.out.println("Berhasil menambahkan karyawan dengan id " + ID);
 		if (((Managerlist.size() - 1) % 3) == 0) {
 			if (Managerlist.size() - 1 == 0) {
-				
+
 			} else {
 				System.out.print("Bonus sebesar 10% telah diberikan kepada karyawan dengan id ");
 				for (int x = 0; x < Managerlist.size() - 1; x++) {
@@ -117,17 +117,17 @@ public class Main {
 					int i;
 					for (i = 0; i < IDlist.size(); i++) {
 						if (IDlist.get(i) == Managerlist.get(x)) {
-							ListKaryawan.get(i).SetGaji(
-									ListKaryawan.get(i).getGaji() + (ListKaryawan.get(i).getGaji() * 1 / 10));
+							ListKaryawan.get(i)
+									.SetGaji(ListKaryawan.get(i).getGaji() + (ListKaryawan.get(i).getGaji() * 1 / 10));
 						}
 					}
 				}
 				System.out.printf("\n");
 			}
-		} 
+		}
 		if (((Supervisorlist.size() - 1) % 3) == 0) {
 			if (Supervisorlist.size() - 1 == 0) {
-				
+
 			} else {
 				System.out.print("Bonus sebesar 7.5% telah diberikan kepada karyawan dengan id ");
 				for (int x = 0; x < Supervisorlist.size() - 1; x++) {
@@ -139,17 +139,17 @@ public class Main {
 					int a;
 					for (a = 0; a < IDlist.size(); a++) {
 						if (IDlist.get(a) == Supervisorlist.get(x)) {
-							ListKaryawan.get(a).SetGaji(
-									ListKaryawan.get(a).getGaji() + (ListKaryawan.get(a).getGaji() * 3 / 40));
+							ListKaryawan.get(a)
+									.SetGaji(ListKaryawan.get(a).getGaji() + (ListKaryawan.get(a).getGaji() * 3 / 40));
 						}
 					}
 				}
 				System.out.printf("\n");
 			}
-		} 
-		if (((Adminlist.size() - 1) % 3) == 0){
-			if (Adminlist.size() == 0) {
-				
+		}
+		if (((Adminlist.size() - 1) % 3) == 0) {
+			if (Adminlist.size() - 1 == 0) {
+
 			} else {
 				System.out.print("Bonus sebesar 5% telah diberikan kepada karyawan dengan id");
 				for (int x = 0; x < Adminlist.size() - 1; x++) {
@@ -161,8 +161,8 @@ public class Main {
 					int i;
 					for (i = 0; i < IDlist.size(); i++) {
 						if (IDlist.get(i) == Adminlist.get(x)) {
-							ListKaryawan.get(i).SetGaji(
-									ListKaryawan.get(i).getGaji() + (ListKaryawan.get(i).getGaji() * 1 / 20));
+							ListKaryawan.get(i)
+									.SetGaji(ListKaryawan.get(i).getGaji() + (ListKaryawan.get(i).getGaji() * 1 / 20));
 						}
 					}
 				}
@@ -226,7 +226,7 @@ public class Main {
 			ListKaryawan.remove(idx - 1);
 		}
 	}
-	
+
 	private void InserdataForUpdate() {
 		String name, kelamin;
 		String Jabatan;
@@ -248,7 +248,7 @@ public class Main {
 		for (int x = 0; x < 2; x++) {
 			ID += (char) (rand.nextInt(23) + 65);
 		}
-	
+
 		for (int i = 0; i < 4; i++) {
 			if (i == 0) {
 				ID += (-rand.nextInt(10));
@@ -274,6 +274,7 @@ public class Main {
 		}
 		Collections.sort(ListKaryawan, new Sortbyname());
 	}
+
 	private void Deletedata() {
 		if (ListKaryawan.isEmpty()) {
 			System.out.println("There is no data....");
@@ -304,11 +305,10 @@ public class Main {
 			ListKaryawan.remove(idx - 1);
 			System.out.println("Delete Succes");
 		}
-		
+
 	}
 
 	public static void main(String[] args) {
 		new Main();
 	}
-
 }
